@@ -19,7 +19,7 @@ class Map extends React.Component {
     // create map
     this.map = L.map("map", {
       center: [this.props.markerPosition.lat, this.props.markerPosition.lng],
-      zoom: 8,
+      zoom: 18,
       //minZoom: 18,
       //maxZoom:18,
       layers: [
@@ -32,16 +32,16 @@ class Map extends React.Component {
         )
       ]
     });
-    //this.map.zoomControl.remove();
-    //this.map.scrollWheelZoom.disable();
-    //this.map.touchZoom.disable();
-    //this.map.dragging.disable();
-    //this.map.keyboard.disable();
+    this.map.zoomControl.remove();
+    this.map.scrollWheelZoom.disable();
+    this.map.touchZoom.disable();
+    this.map.dragging.disable();
+    this.map.keyboard.disable();
     //this.props.checkInVt();
    
 
     // add marker
-    this.countyData = L.geoJSON(countyData);//, {fillColor: "none", color: "none"});
+    this.countyData = L.geoJSON(countyData,{fillColor: "none", color: "none"});
     this.countyData.addTo(this.map)
     this.vtLayer = L.geoJSON(borderData, {fillColor: "none", color: "none"});
     //this.results = leafletPip.pointInLayer(this.vtLayer);
@@ -61,7 +61,8 @@ class Map extends React.Component {
         [markerPosition.lng, markerPosition.lat],
         this.vtLayer
       ).length;
-    }
+      }
+      this.map.setZoom(this.props.zoomLevel)
   }
   render() {
     return <div id="map" style={style} />;

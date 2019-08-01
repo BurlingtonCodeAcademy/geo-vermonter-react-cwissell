@@ -8,18 +8,11 @@ Map{
 
 #score{
   position: absolute;
-  top: 36px;
+  top: 0px;
   right: 0;
   z-index: 500;
   color: red;
-}
-
-#scoreText{
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 500;
-  color: red;
+  background: black;
 }
 
 #north{
@@ -55,8 +48,4 @@ Map{
   bottom: 15px;
   left: 0;
   z-index: 500;
-}
-
-guessForm{
-
 }
