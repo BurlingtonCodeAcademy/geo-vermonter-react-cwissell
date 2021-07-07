@@ -1,0 +1,51 @@
+#mapContainer{
+  position: relative;
+}
+
+Map{
+  position: relative;
+}
+
+#score{
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 500;
+  color: red;
+  background: black;
+}
+
+#north{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 500;
+}
+
+#east{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 500;
+}
+
+#south{
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  z-index: 500;
+}
+
+#west{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 500;
+}
+
+#gameButtons{
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  z-index: 500;
+}
